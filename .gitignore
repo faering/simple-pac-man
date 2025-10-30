@@ -15,3 +15,6 @@
 
 # ignore temporary files
 *.tmp
+
+# ignore CMakeLists.txt (temporarily)
+CMakeLists.txt
