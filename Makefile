@@ -1,13 +1,13 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -lsfml-graphics -lsfml-window -lsfml-system
 BUILD_DIR = ./build
 SRC_DIR = ./src
 
-all: main
+all: pacman
 
 # target to build
-main: $(SRC_DIR)/main.cpp
-	$(CXX) $(CXXFLAGS) $(SRC_DIR)/main.cpp -o $(BUILD_DIR)/main
+pacman: $(SRC_DIR)/main.cpp
+	$(CXX) $(SRC_DIR)/main.cpp -o $(BUILD_DIR)/pacman $(CXXFLAGS)
 
 clean:
-	rm -f $(BUILD_DIR)/main
+	rm -f $(BUILD_DIR)/pacman
